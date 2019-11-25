@@ -1,0 +1,137 @@
+<!doctype>
+<html>
+<head>
+<script type="text/javascript">
+
+
+var divisores=1;
+var bandera=1;
+var cuenta=0;
+var nt=[];
+
+
+function numeroTriangular(numero) //me calcula numero triangular
+{
+  var nrotriangular=0;
+  for (var i=1;i<numero;i++)
+     nrotriangular=nrotriangular+i;
+
+ return nrotriangular;
+}
+
+
+function factorear(c)
+{
+	var factoreando=1;
+	var contador=0;
+
+for (var i=1;i<=c;i++)
+	{
+		//alert ("chequeando si es primo");
+		var aux=c%i;
+		if (aux==0)
+		  {
+		  	contador=contador+1;
+		  //if(contador>5)
+		  	//alert ("el contador esta: "+ contador);
+		  }
+		  /* {factoreando=c/i;
+			if (factoreando==c)
+				{break;
+			    }
+			    else
+  			    {c=factoreando;
+	     	    contador=contador+1; //no es primo
+	         	}
+		   } */
+    }		
+return contador;	  
+}	
+
+
+// Trabajo con array
+
+
+function cargarNTenArray()
+{
+
+    var nroarray=0;
+	for (var i=20000;i<30000;i++)
+	{ valores=numeroTriangular(i);
+		// alert ("Numero Triangular: "+valores);
+         nt[nroarray]=valores; //guardo en el array el numero triangular
+         nroarray=nroarray+1;
+		  // **** ACA TENGO EL PRIMER VALOR AHORA LO TENGO QUE FACTORIZAR
+         /*cuenta=factorear(valores);
+         if (cuenta>10)
+         	{alert ("El numero triangular "+ valores + "tiene "+ cuenta + "factoreos");
+            break;*/
+    }
+        // alert (cuenta);
+        
+}
+
+
+
+
+cargarNTenArray();
+for (var i=0;i<9999;i++)
+{
+	var auxcont=0;
+	auxcont=factorear(nt[i]);
+
+	if (auxcont>300)
+	{
+	alert ("el numero triangular"+nt[i]+" tiene "+ auxcont+ " divisores");
+		//return auxcont;
+		break;
+	}
+	
+}
+
+
+
+
+/*
+var valores;
+	for (var i=100;i<101;i++)
+		 { valores=numeroTriangular(i);
+		 alert ("Factoreo el numero "+valores);
+		  // **** ACA TENGO EL PRIMER VALOR AHORA LO TENGO QUE FACTORIZAR
+         cuenta=factorear(valores);
+         if (cuenta>10)
+         	{alert ("El numero triangular "+ valores + "tiene "+ cuenta + "factoreos");
+            break;
+        	}
+        // alert (cuenta);
+        }
+
+
+
+*/
+
+</script>
+</head>
+
+<body>
+	   La secuencia de números de triángulo se genera sumando los números naturales. Entonces el 7º número de triángulo sería 1 + 2 + 3 + 4 + 5 + 6 + 7 = 28. 
+	   Los primeros diez términos serían:
+
+1, 3, 6, 10, 15, 21, 28, 36, 45, 55, ...
+
+Vamos a enumerar los factores de los primeros siete números de triángulo:
+
+3: 1.3
+6: 1,2,3,6
+10: 1,2,5,10
+15: 1,3,5,15
+21: 1,3,7,21
+28: 1,2,4,7,14,28
+Podemos ver que 28 es el primer número de triángulo que tiene más de cinco divisores.
+
+¿Cuál es el valor del primer número de triángulo para tener más de quinientos divisores? <b>
+    Resultado:
+		<script> document.writeln(  ); </script>
+	</b>
+</body>
+</html>
