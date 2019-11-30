@@ -1,3 +1,5 @@
+package codeJava;
+
 public class Excersise1 {
 
     public static void main(String [] args){

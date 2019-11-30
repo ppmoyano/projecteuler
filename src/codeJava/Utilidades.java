@@ -1,3 +1,5 @@
+package codeJava;
+
 public class Utilidades {
 
     public static boolean is3Multiply(int num)
