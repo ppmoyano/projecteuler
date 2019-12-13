@@ -53,4 +53,14 @@ public class Utilidades {
     lista.remove(lista.size()-1);
         return lista;
     }
+
+    public static ArrayList convertStringToArrayInteger(String aux){
+        ArrayList<Long> lista = new ArrayList();
+        for (int i=0;i<aux.length();i++){
+            lista.add(Long.valueOf(String.valueOf(aux.charAt(i))));
+        }
+        return lista;
+    }
+
+
 }
