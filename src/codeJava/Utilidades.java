@@ -1,6 +1,6 @@
 package codeJava;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Utilidades {
 
@@ -60,6 +60,44 @@ public class Utilidades {
             lista.add(Long.valueOf(String.valueOf(aux.charAt(i))));
         }
         return lista;
+    }
+
+    /*
+    Este metodo ve cuantos pares de numeros enteros repetidos hay en una lista
+     */
+    public static int sockMerchant(int n, int[] ar) {
+        Set<Integer> colors = new HashSet<>();
+        int pairs = 0;
+        for (int i=0;i<n-1;i++) // 1 1 3 1 2 1 3 3 3 3  // 1 1 1 1 2 3 3 3 3 3
+        {
+            if (colors.remove(ar[i])) { pairs++; } else { colors.add(ar[i]); } //con esta linea hago el resto
+        }
+
+
+ /*       Arrays.sort(ar);
+                int count = 1;
+                int total = 0;
+                for (int i=0;i<n-1;i++) // 1 1 3 1 2 1 3 3 3 3  // 1 1 1 1 2 3 3 3 3 3
+                {
+                    if (colors.remove(c[i])) { pairs++; } else { colors.add(c[i]); }
+                    if (ar[i]==ar[i+1])
+                    {
+                        count++;
+                    }
+                    else
+                    {
+                        if (count>1)
+              {
+                  total = total + (count/2);
+              }
+                count = 1;
+            }
+            if (i>=n-2)
+            {
+               total = total + (count/2);
+           }
+    }*/
+        return pairs;
     }
 
 
