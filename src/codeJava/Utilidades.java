@@ -100,5 +100,17 @@ public class Utilidades {
         return pairs;
     }
 
-
+    /*
+    Este metodo recive un List<Integer> y devuelve un int []
+     */
+    public static int[] convertListToArray(List<Integer> integers)
+    {
+        int[] ret = new int[integers.size()];
+        Iterator<Integer> iterator = integers.iterator();
+        for (int i = 0; i < ret.length; i++)
+        {
+            ret[i] = iterator.next().intValue();
+        }
+        return ret;
+    }
 }
