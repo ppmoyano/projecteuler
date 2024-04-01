@@ -1,6 +1,6 @@
 package codeJava;
 
-public class Excersise1 {
+public class Exercise1 {
 
     public static void main(String [] args){
         int sumatoria=0;

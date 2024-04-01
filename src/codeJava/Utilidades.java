@@ -113,4 +113,27 @@ public class Utilidades {
         }
         return ret;
     }
+
+    public static List<Integer> getPrimes(int number) {
+        List<Integer> allPrimes = new ArrayList<>();
+        for (int i = 2; i < number; i++) {
+            if (isPrime(i)) {
+                allPrimes.add(i);
+            }
+        }
+        return allPrimes;
+    }
+
+    private static boolean isPrime(int number) {
+        for (int i = 2; i <= number/2; i++) {
+            if (number%i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static long getTotal(List<Integer> primes) {
+        return primes.stream().mapToLong(num -> num).sum();
+    }
 }

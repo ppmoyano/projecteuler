@@ -2,9 +2,7 @@ package codeJava;
 
 import java.util.ArrayList;
 
-import static java.lang.Integer.*;
-
-public class Excersise2 {
+public class Exercise2 {
 
     public static void main(String [] args) {
         ArrayList<Integer> lista = Utilidades.FibonaciNumbersMaxNum(4000000);
